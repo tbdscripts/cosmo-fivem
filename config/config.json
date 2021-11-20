@@ -1,5 +1,5 @@
 {
     "instanceUrl": "https://demo.tbdscripts.com",
     "serverToken": "<your token>",
-    "fetchInterval": 4
+    "fetchInterval": 60
 }

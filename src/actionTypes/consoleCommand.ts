@@ -30,7 +30,7 @@ export default class ConsoleCommand implements ActionType {
     private replaceVariables(cmd: string, payload: ActionTypePayload) {
         const steamId = new SteamId(payload.action.receiver);
 
-        return cmd.replace(":sid64", payload.order.receiver)
+        return cmd.replace(":sid64", payload.action.receiver)
             .replace(":sid", steamId.getSteam2RenderedID())
             .replace(":nick", GetPlayerName(payload.playerSource));
     }

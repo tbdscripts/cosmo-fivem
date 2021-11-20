@@ -63,7 +63,6 @@ on("onResourceStart", async resourceName => {
                 }
 
                 const result = await actionType.handleAction({
-                    order: pendingOrder,
                     action: action,
                     playerSource: playerSrc
                 });
@@ -80,9 +79,7 @@ on("onResourceStart", async resourceName => {
             await httpClient.deliverOrder(pendingOrder.id);
         }
 
-        for (const expiredAction of expiredActions) {
-            if (!expiredAction.order) continue;
-            
+        for (const expiredAction of expiredActions) {          
             const actionType = findActionTypeByName(expiredAction.name);
             if (!actionType) continue;
 
@@ -90,7 +87,6 @@ on("onResourceStart", async resourceName => {
             if (!playerSource) continue;
 
             await actionType.handleExpiredAction({
-                order: expiredAction.order,
                 action: expiredAction,
                 playerSource: playerSource,
             });

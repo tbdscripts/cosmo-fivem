@@ -1,6 +1,6 @@
 export interface ActionTypePayload {
     action: Action;
-    order: Order;
+    order?: Order;
     playerSource: string;
 }
 
@@ -23,7 +23,6 @@ export interface Action {
     name: string;
     receiver: string;
     data: any;
-    order?: Order;
 }
 
 export interface Order {
