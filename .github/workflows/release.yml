@@ -16,9 +16,8 @@ jobs:
         with:
           node-version: '14'
 
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 2.0.1
+      - name: Instal pnpm
+        run: npm i -g pnpm
 
       - name: Install Dependencies
         run: pnpm install
