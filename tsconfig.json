@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "target": "es5",
+        "lib": ["es2018"],
+        "types": ["@citizenfx/server", "@types/node"],
+        "moduleResolution": "node"
+    },
+    "include": [
+        "./src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

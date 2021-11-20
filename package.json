@@ -1,0 +1,28 @@
+{
+  "name": "cosmo",
+  "version": "1.0.0",
+  "description": "FiveM integration for Cosmo",
+  "main": "index.js",
+  "repository": "https://github.com/tbdscripts/cosmo-fivem",
+  "author": "Mex de Loo <mex@zeodev.cc>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode production",
+    "dev": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "debug": "^4.3.2",
+    "fivem-js": "^1.5.2",
+    "steamid": "^2.0.0"
+  },
+  "devDependencies": {
+    "@citizenfx/server": "^2.0.4978-1",
+    "@types/node": "^16.11.9",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1"
+  }
+}
