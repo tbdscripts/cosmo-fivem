@@ -19,7 +19,9 @@ jobs:
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 2.0.1
-          run_install: true
+
+      - name: Install Dependencies
+        run: pnpm install
       
       - name: Build Project
         run: pnpm run build
