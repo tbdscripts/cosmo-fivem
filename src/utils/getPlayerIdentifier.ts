@@ -3,7 +3,7 @@ export enum PlayerIdentifier {
 }
 
 const identifierPrefixes: Record<PlayerIdentifier, string> = {
-    [PlayerIdentifier.Steam]: 'steam',
+    [PlayerIdentifier.Steam]: "steam",
 };
 
 export default function getPlayerIdentifier(playerSrc: string, identifier: PlayerIdentifier): string | null {

@@ -7,7 +7,7 @@ interface ConsoleCommandData {
 }
 
 export default class ConsoleCommand implements ActionType {
-    public name = 'console_command';
+    public name = "console_command";
 
     public async handleAction(payload: ActionTypePayload): Promise<boolean> {
         const data = payload.action.data as ConsoleCommandData;

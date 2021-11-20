@@ -1,4 +1,3 @@
-import { Player } from "fivem-js";
 import { findActionTypeByName } from "./actionTypes";
 import { Configuration } from "./types";
 import getPlayerIdentifier, { PlayerIdentifier } from "./utils/getPlayerIdentifier";
@@ -6,8 +5,8 @@ import HttpClient from "./utils/httpClient";
 
 function getDefaultConfig(): Configuration {
     return {
-        instanceUrl: 'https://your.domain',
-        serverToken: '<your token>',
+        instanceUrl: "https://your.domain",
+        serverToken: "<your token>",
         fetchInterval: 60,
     };
 }
@@ -26,7 +25,7 @@ function findPlayerBySteamId(ref: string): string | null {
     return null;
 }
 
-on('onResourceStart', async resourceName => {
+on("onResourceStart", async resourceName => {
     if (GetCurrentResourceName() !== resourceName) return;
 
     const rawConfig = LoadResourceFile(GetCurrentResourceName(), "config/config.json");
@@ -36,8 +35,8 @@ on('onResourceStart', async resourceName => {
         try {
             config = JSON.parse(rawConfig) as Configuration;
         } catch (e) {
-            console.error('Invalid config.json file, reverting to default.');
-            console.error('Details: ' + e.message);
+            console.error("Invalid config.json file, reverting to default.");
+            console.error("Details: " + e.message);
         }
     }
 
