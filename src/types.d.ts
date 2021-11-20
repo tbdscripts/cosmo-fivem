@@ -1,5 +1,3 @@
-import { Player } from "fivem-js";
-
 export interface ActionTypePayload {
     action: Action;
     order: Order;
